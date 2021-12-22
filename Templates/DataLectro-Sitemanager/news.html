@@ -1,0 +1,43 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'DataLectro-Sitemanager/CSS/news.css' %}">
+</head>
+<main>
+    <div class="title">
+        <h1>Beheer nieuws berichten:</h1>
+    </div>
+    <a href="/sitemanager" class="return">
+        <div>Go back...</div>
+    </a>
+    <form method="post" enctype="multipart/form-data" autocomplete="off">
+        {% csrf_token %}
+        <input type="text" name="title" placeholder="Niews titel" autocomplete="off">
+        <div class="upload">
+            <label for="img">Afbeelding:</label>
+            <input type="file" id="img" name="img" accept="image/*">
+        </div>
+        <div class="upload">
+            <label for="borderSelect">Niews kader:</label>
+            <select name="borderSelect" id="borderSelect">
+                <option value="Rood">Rood</option>
+                <option value="Groen">Groen</option>
+                <option value="Blauw">Blauw</option>
+                <option value="Geen">Geen</option>
+            </select>
+        </div>
+        <textarea name="alinea1" class="newsText" placeholder="alinea-1" autocomplete="off"></textarea>
+        <textarea name="alinea2" class="newsText" placeholder="alinea-2" autocomplete="off"></textarea>
+        <textarea name="alinea3" class="newsText" placeholder="alinea-3" autocomplete="off"></textarea>
+        <button name="add" type="submit">Submit!</button>
+    </form>
+    <div class="pagesList">
+        {% for item in news %}
+        <div class="itemBox">
+            <div class="pageLink">
+                <p>nieuws item - {{ item.title }}</p>
+            </div>
+            <a class="delIcon" href="/sitemanager/nieuws/delete/{{ item.id }}"><i class="fa fa-trash"></i></a>
+        </div>
+        {% endfor %}
+    </div>
+</main>

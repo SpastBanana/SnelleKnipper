@@ -1,0 +1,136 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'CSS/home.css' %}">
+</head>
+
+<main>
+    <div class="newsRow">
+        {% for item in news %}
+            <div class="newsItem">
+                <div class="title">
+                    <h2>{{ item.title }}</h2>
+                </div>
+                <div class="alinea1"></div>
+                <div class="image"></div>
+                <div class="alinea2"></div>
+                <div class="alinea3"></div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="row1">
+        <div class="tarievenBlock">
+            <h1>Prijslijst:</h1>
+            <div class="knipPrijs">
+                <h2 style="color: #324c8a;">Knippen: &euro; {{ mainPrice.snipPrice }}</h2>
+                <br>
+                <br>
+                <br>
+            </div>
+            <h2 style="font-weight: 100;">Kortingen:</h2>
+            <div class="kortingen">
+                {% for korting in kortingen %}
+                <div class="Korting">
+                    <h3>{{ korting.saleName }}:</h3>
+                    <p>&euro; {{ korting.salePrice }}</p>
+                    <br>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="infoBlock">
+            <h1>Openingtijden</h1>
+            <div class="openingstijden">
+                <h2>MA t/m VR</h2>
+                <h2>09:00 - 18:00</h2>
+            </div>
+            <div class="toevoeging">
+                <h2>Telefoon: 06-53648574</h2>
+                <p>Afspraken gaan voor</p>
+            </div>
+            <div class="locatie">
+                <p>Voorstraat 47</p>
+                <p>3401 DB IJsselstein (Ut.)</p>
+            </div>
+        </div>
+    </div>
+    <div class="row2">
+        <div class="introBox">
+            <h1>Wat mij zo bijzonder maakt</h1>
+            <p>
+                Ik ben "De Snelle Knipper". Ik knip mensen 
+                met en zonder afspraak. Wat mij zo bijzonder 
+                maakt is dat je bij mij heel snel klaar bent 
+                en dat de klant altijd tevreden is met het 
+                resultaat!
+            </p>
+        </div>
+        <div class="cards">
+            <div class="cardBox">
+                <div class="card">
+                    <div class="box">
+                        <img src="{% static 'IMG/ClubKampioenMiddenNederland.png' %}">
+                    </div>
+                    <div class="float">
+                        <h4>Club kampioen Midden Nederland (Heren) 1988 te Utrecht</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="{% static 'IMG/JeugdWerledKammpioenschap.png' %}" style="width: 70px;">
+                        <img src="{% static 'IMG/JeugdWereldKampioenschap2.png' %}" style="width: 70px;">
+                    </div>
+                    <div class="float">
+                        <h4>Eerste plaats jeugdwereld kampioenschap Modisch Kapsel (Heren) 1988 te Düsseldorf</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="cardBox">
+                <div class="card">
+                    <div class="box">
+                        <img src="{% static 'IMG/OostelijkClubKampioen.png' %}">
+                    </div>
+                    <div class="float">
+                        <h4>Oostelijk Club Kampioen (Heren) 1988 te Hengelo</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="{% static 'IMG/TeamWdstrijdSalonkapsel.png' %}">
+                    </div>
+                    <div class="float">
+                        <h4>Eerste plaats Teamwedstrijd Salonkapsel (Dames) 1990 te Hengelo</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="cardBox">
+                <div class="card">
+                    <div class="box">
+                        <img src="{% static 'IMG/ToekomsttrofeeDelft.png' %}">
+                    </div>
+                    <div class="float">
+                        <h4>Eerste plaats Toekomsttrofee Modisch Kapsel (Heren) 1987 te Delft</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="{% static 'IMG/ToekomsttrofeeGroningen.png' %}">
+                    </div>
+                    <div class="float">
+                        <h4>Winnaar Toekomsttrofee (Heren) 1989 te Groningen</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="cardBox">
+                <div class="card">
+                    <div class="box">
+                        <img src="{% static 'IMG/VoortgezetHerenVakSalonKapsel.png' %}">
+                    </div>
+                    <div class="float">
+                        <h4>Eerste plaats Voortgezet Heren-vak Salonkapsel 1989 te Amsterdam</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

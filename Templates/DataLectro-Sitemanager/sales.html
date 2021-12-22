@@ -1,0 +1,29 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'DataLectro-Sitemanager/CSS/sales.css' %}">
+</head>
+<main>
+    <div class="title">
+        <h1>Beheer kortingen:</h1>
+    </div>
+    <a href="/sitemanager" class="return">
+        <div>Go back...</div>
+    </a>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="saleName" placeholder="Naam / omschrijving van korting">
+        <input type="text" name="salePrice" placeholder="Korting (prijs)">
+        <button name="add" type="submit">Submit!</button>
+    </form>
+    <div class="pagesList">
+        {% for korting in kortingen %}
+        <div class="itemBox">
+            <div class="pageLink">
+                <p>Korting - {{ korting.saleName }}</p>
+                <p>&euro; {{ korting.salePrice }}</p>
+            </div>
+            <a class="delIcon" href="/sitemanager/kortingen/delete/{{ korting.id }}"><i class="fa fa-trash"></i></a>
+        </div>
+        {% endfor %}
+    </div>
+</main>

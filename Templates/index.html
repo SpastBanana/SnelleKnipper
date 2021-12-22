@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/index.css' %}">
+    <title>De Snelle Knipper</title>
+</head>
+<body>
+    <header>
+        <img src="{% static 'IMG/CornerLogo.png' %}" alt="CornerLogo">
+        <div class="title">
+            <h1>De Snelle Knipper</h1>
+            <h3>Geknipt met en zonder afspraak</h3>
+        </div>
+        <div class="headInfo">
+            <h2>06 - 53 64 85 74</h2>
+            <p>KVK - 30111131</p>
+        </div>
+        <div class="blackline"></div>
+    </header>
+    {% include page %}
+</body>
+</html>

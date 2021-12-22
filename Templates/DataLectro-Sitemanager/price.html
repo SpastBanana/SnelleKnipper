@@ -1,0 +1,19 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'DataLectro-Sitemanager/CSS/price.css' %}">
+</head>
+<main>
+    <div class="title">
+        <h1>Geef hier de nieuwe knipprijs op</h1>
+    </div>
+    <a href="/sitemanager" class="return">
+        <div>Go back...</div>
+    </a>
+    <div class="form">
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="price" name="inputPrice">
+            <button name="submit" type="submit">Submit!</button>
+        </form>
+    </div>
+</main>
