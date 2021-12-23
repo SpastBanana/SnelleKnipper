@@ -31,7 +31,7 @@ class newsBlocks(models.Model):
         ('Geen', 'Geen'),
     }
     title = models.CharField(max_length=30)
-    img = models.ImageField(upload_to="newsImages", default='none.png')
+    img = models.ImageField(upload_to="newsImages", default='none.png', null=True, blank=True)
     borderSelect = models.CharField(max_length=255, choices=styleChoises)
     alinea1 = models.TextField(max_length=150)
     alinea2 = models.TextField(max_length=150)

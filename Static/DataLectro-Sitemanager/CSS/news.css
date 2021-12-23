@@ -41,8 +41,9 @@
     }
 
     form .upload {
+        width: 100%;
+        margin-bottom: 0.4vw;
         display: flex;
-        align-items: flex-start;
         justify-content: center;
         flex-direction: column;
     }

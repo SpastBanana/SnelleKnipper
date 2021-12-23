@@ -5,6 +5,13 @@
 </head>
 
 <main>
+    
+    {% if user.is_authenticated %}
+        <div class="editor" style="margin-bottom: 4vw; margin-top: 4vw; text-align: center;">
+            <a href="/sitemanager">Back to sitemanager</a>
+        </div>
+    {% endif %}
+        
     <div class="newsRow">
         {% for item in news %}
             <div class="newsItem">
@@ -43,7 +50,7 @@
                 {% for korting in kortingen %}
                 <div class="Korting">
                     <h3>{{ korting.saleName }}:</h3>
-                    <p>&euro; {{ korting.salePrice }}</p>
+                    <p>{{ korting.salePrice }}</p>
                     <br>
                 </div>
                 {% endfor %}
@@ -88,8 +95,8 @@
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="{% static 'IMG/JeugdWerledKammpioenschap.png' %}" style="width: 70px;">
-                        <img src="{% static 'IMG/JeugdWereldKampioenschap2.png' %}" style="width: 70px;">
+                        <img src="{% static 'IMG/JeugdWerledKammpioenschap.png' %}" style="width: 4.8vw;">
+                        <img src="{% static 'IMG/JeugdWereldKampioenschap2.png' %}" style="width: 4.8vw;">
                     </div>
                     <div class="float">
                         <h4>Eerste plaats jeugdwereld kampioenschap Modisch Kapsel (Heren) 1988 te Düsseldorf</h4>

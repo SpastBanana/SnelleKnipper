@@ -1,19 +1,32 @@
 {% load static %}
 
 <head>
-    <link rel="stylesheet" href="{% static 'CSS/home.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/login.css' %}">
 </head>
 
 <main>
+    <div class="back" style="margin-bottom: 4vw;">
+        <a href="/">Back to site</a>
+    </div>
     <div class="desktop">
-        <form method="post">
-            {% csrf_token %}
-            <input type="text" name="username" placeholder="Username">
-            <input type="password" name="password" placeholder="Password">
-            <button type="submit" name="login">Login</button>
-        </form>
+        {% if user.is_authenticated %}
+            <h1>Welcome {{ user.username }}</h1>
+            <h3>You are allready logged in...</h3>
+            <h4>Klick <a href="/sitemanager">here</a> to go to your sitemanager</h4>
+        {% else %}
+            <div class="login">
+                <h2>Login</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="text" name="username" placeholder="Username">
+                    <input type="password" name="password" placeholder="Password">
+                    <button type="submit" name="login">Login</button>
+                </form>
+            </div> 
+        {% endif %}
     </div>
     <div class="phone">
-        <h1>Page not available for Phone's or tablet's...</h1>
+        <h1 style="text-decoration: underline;">Sorry</h1>
+        <h3>Page not available for Phone's or tablet's...</h3>
     </div>
 </main>

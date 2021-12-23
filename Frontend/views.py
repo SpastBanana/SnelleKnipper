@@ -37,7 +37,7 @@ def loginView(request):
                 'page': 'login.html',
                 'error': 'Incorrect password and/or username',
             }
-            return render(request, '    .html', data)
+            return render(request, 'index.html', data)
 
     data = {
         'page': 'login.html',

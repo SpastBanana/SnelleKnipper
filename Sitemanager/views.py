@@ -4,6 +4,9 @@ from .models import mainPrice, salePrices, newsBlocks
 from .forms import newsForm
 
 def homeView(request):
+    if not request.user.is_authenticated:
+        return redirect('/login')
+
     data = {
         'page': 'DataLectro-Sitemanager/home.html',
     }
@@ -11,6 +14,8 @@ def homeView(request):
 
 
 def priceView(request):
+    if not request.user.is_authenticated:
+        return redirect('/login')
 
     data = {
         'page': 'DataLectro-Sitemanager/price.html',
@@ -25,6 +30,9 @@ def priceView(request):
 
 
 def salesView(request):
+    if not request.user.is_authenticated:
+        return redirect('/login')
+
     kortingen = salePrices.objects.all()
 
     data = {
@@ -42,6 +50,9 @@ def salesView(request):
 
 
 def delSaleView(request, saleID):
+    if not request.user.is_authenticated:
+        return redirect('/login')
+
     saleItem = get_object_or_404(salePrices, pk=saleID)
     deleted = saleItem.saleName
     saleItem.delete()
@@ -55,6 +66,9 @@ def delSaleView(request, saleID):
 
 
 def newsView(request):
+    if not request.user.is_authenticated:
+        return redirect('/login')
+
     news = newsBlocks.objects.all()
 
     data = {
@@ -72,6 +86,9 @@ def newsView(request):
 
 
 def delNewsView(request, newsID):
+    if not request.user.is_authenticated:
+        return redirect('/login')
+
     newsItem = get_object_or_404(newsBlocks, pk=newsID)
     newsItem.img.delete()
     deleted = newsItem.title
