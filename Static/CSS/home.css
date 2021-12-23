@@ -1,26 +1,30 @@
 @media (min-width: 800px) {
-    main {
-        height: 93%;
+
+    .newsRow {
+        margin-top: 2vw;
+        width: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-direction: column;
     }
 
+
+
     .row1 {
-        height: 25%;
+        height: 30vw;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-around;
+        margin-bottom: 10vw;
     }
 
     .infoBlock {
         width: 35%;
-        height: 80%;
+        height: 100%;
         text-align: center;
         font-weight: 500;
-        font-size: 90%;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
@@ -30,20 +34,36 @@
         box-shadow: 0px 6px 10px 1px #888888;
     }
 
+    .infoBlock h1 {
+        font-size: 2vw;
+    }
+
+    .infoBlock h2 {
+        font-size: 1.6vw;
+    }
+
+    .infoBlock p {
+        font-size: 1.4vw;
+    }
+
     .tarievenBlock {
         width: 30%;
-        height: 76%;
+        height: 95%;
         text-align: left;
         font-weight: 500;
         display: flex;
         align-items: flex-start;
-        justify-content: space-evenly;
+        justify-content: space-between;
         flex-direction: column;
         border: solid 3px #324c8a;
         padding-left: 3%;
         padding-right: 3%;
         padding-top: 1%;
         padding-bottom: 1%;
+    }
+
+    .tarievenBlock h1 {
+        font-size: 2.2vw;
     }
 
     .knipPrijs {
@@ -53,9 +73,20 @@
         width: 100%;
     }
 
+    .tarievenBlock h2 {
+        font-size: 1.5vw;
+    }
+
+    .tarievenBlock h3 {
+        font-size: 1.2vw;
+    }
+
+    .tarievenBlock p {
+        font-size: 1.1vw;
+    }
+
     .row2 {
-        width: 90%;
-        height: 70%;
+        width: 100%;
         font-weight: 500;
         display: flex;
         align-items: center;
@@ -79,7 +110,6 @@
         align-items: center;
         justify-content: space-between;
         flex-direction: column;
-        height: 90%;
         width: 100%;
     }
 
@@ -88,6 +118,7 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        margin-bottom: 2vw;
     }
 
     .card {
@@ -118,7 +149,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        text-align: center;
+        font-size: 1.1vw;
+        text-align: center
+    }
+
+    .float h4 {
+        margin-left: 0.2vw;
+        margin-right: 0.2vw;
     }
 }
 

@@ -11,10 +11,21 @@
                 <div class="title">
                     <h2>{{ item.title }}</h2>
                 </div>
-                <div class="alinea1"></div>
-                <div class="image"></div>
-                <div class="alinea2"></div>
-                <div class="alinea3"></div>
+                <div class="alinea1">
+                    <p>{{ item.alinea1 }}</p>
+                </div>
+                
+                {% if not item.img == 'none.png' %}
+                    <div class="image">
+                        <img src="/media/{{ item.img }}" alt="newsIMG">
+                    </div>               
+                {% endif %}
+                <div class="alinea2">
+                    <p>{{ item.alinea2 }}</p>
+                </div>
+                <div class="alinea3">
+                    <p>{{ item.alinea3 }}</p>
+                </div>
             </div>
         {% endfor %}
     </div>
