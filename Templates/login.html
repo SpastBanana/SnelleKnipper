@@ -1,0 +1,19 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'CSS/home.css' %}">
+</head>
+
+<main>
+    <div class="desktop">
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit" name="login">Login</button>
+        </form>
+    </div>
+    <div class="phone">
+        <h1>Page not available for Phone's or tablet's...</h1>
+    </div>
+</main>
