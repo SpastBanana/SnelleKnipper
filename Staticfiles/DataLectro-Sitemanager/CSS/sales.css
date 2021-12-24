@@ -1,0 +1,104 @@
+@media (min-width: 800px) {
+    main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 1.5vw;
+        margin-bottom: 1.8vw;
+    }
+
+    .return {
+        height: 3vw;
+        width: 10vw;
+        background: rgb(125, 219, 31);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: whitesmoke;
+        font-size: 1.5vw;
+        font-weight: 900;
+        text-decoration: none;
+        margin-bottom: 5vw;
+    }
+
+    form {
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    form input {
+        height: 1vw;
+        padding: 1vw;
+        width: 18vw;
+        margin-bottom: 1vw;
+        outline: none;
+    }
+
+    form button {
+        height: 3vw;
+        width: 20vw;
+        cursor: pointer;
+        border: none;
+        background: rgb(125, 219, 31);
+        color: whitesmoke;
+        font-size: 1.5vw;
+        font-weight: 900;
+    }
+
+    .itemBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 3vw;
+    }
+
+    .pagesList {
+        height: auto;
+        padding: 5vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        width: 70vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .pageLink {
+        height: 5vw;
+        width: 30vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: solid 0.5vw #3860A8;
+        border-radius: 0.2vw;
+        margin-bottom: 2vw;
+        text-decoration: none;
+    }
+
+    .pageLink p {
+        font-size: 1.5vw;
+        font-weight: 900;
+        color: #d6a345;
+    }
+
+    .delIcon {
+        font-size: 2.4vw;
+        color: red;
+        height: 5vw;
+        width: 6vw;
+        margin-bottom: 2vw;
+        border: solid 0.5vw #3860A8;
+        margin-left: 2vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

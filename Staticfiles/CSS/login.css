@@ -1,0 +1,62 @@
+@media (min-width: 800px) {
+    .phone {
+        display: none;
+    }
+
+    main {
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 1vw;
+        color: #324c8a;
+        font-size: 2vw;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 10vw;
+    }
+
+    form input {
+        height: 2vw;
+        width: 89%;
+        padding: 4%;
+        outline: none;
+    }
+
+    form button {
+        height: 2.5vw;
+        width: 100%;
+        border: none;
+        background-color: rgb(138, 221, 55);
+        color: whitesmoke;
+        font-size: 1.2vw;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 800px) {
+    .desktop {
+        display: none;
+    }
+
+    main {
+        height: 60vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        color: red;
+    }
+}

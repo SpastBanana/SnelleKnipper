@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media (min-width: 800px) {
+
+    header img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 150px;
+    }
+
+    header {
+        height: 150px;
+        width: 80%;
+        margin-left: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    header h1 {
+        font-size: 2vw;
+        font-weight: 900;
+    }
+
+    header h3 {
+        font-size: 1vw;
+        font-weight: 200;
+    }
+
+    header .title{
+        width: 35%;
+        height: 55%;
+        text-align: center;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-bottom: solid 7px #324c8a;
+        border-radius: 15px;
+        box-shadow: 0px 6px 10px 2px #666666;
+    }
+
+    .headInfo p {
+        text-align: center;
+        font-size: 110%;
+        font-weight: 600;
+    }
+
+    header h2 {
+        font-size: 150%;
+        color: #324c8a;
+    }
+
+    .blackline {
+        position: absolute;
+        top: 150px;
+        left: 0;
+        height: 24%;
+        height: 3px;
+        width: 100%;
+        background: black;
+    }
+}
+
+@media (max-width: 800px) {
+    
+    header img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 160px;
+    }
+    
+    header {
+        height: 160px;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    
+    header h1 {
+        font-size: 20px;
+        font-weight: 900;
+    }
+    
+    header h3 {
+        font-size: 12px;
+        font-weight: 200;
+    }
+    
+    header .title{
+        width: 52%;
+        height: 70px;
+        text-align: center;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-bottom: solid 7px #324c8a;
+        border-radius: 15px;
+        box-shadow: 0px 6px 10px 2px #666666;
+        margin-right: -30%;
+    }
+
+    .headInfo {
+        text-align: center;
+        margin-right: -30%;
+    }
+    
+    .headInfo p {
+        text-align: center;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    header h2 {
+        font-size: 17px;
+        color: #324c8a;
+    }
+    
+    .blackline {
+        position: absolute;
+        top: 160px;
+        left: 0;
+        height: 3px;
+        width: 100vw;
+        background: black;
+    }
+}

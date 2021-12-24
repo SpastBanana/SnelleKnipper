@@ -1,0 +1,51 @@
+@media (min-width: 800px) {
+    main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 1.5vw;
+        margin-bottom: 1.8vw;
+    }
+
+    .return {
+        height: 3vw;
+        width: 10vw;
+        background: rgb(125, 219, 31);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: whitesmoke;
+        font-size: 1.5vw;
+        font-weight: 900;
+        text-decoration: none;
+        margin-bottom: 8vw;
+    }
+
+    .form form {
+        width: 22vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .form form input {
+        height: 1vw;
+        width: 13vw;
+        padding: 1vw;
+        outline: none;
+    }
+
+    .form form button {
+        height: 3vw;
+        width: 5vw;
+        border: none;
+        color: whitesmoke;
+        background: rgb(125, 219, 31);
+        cursor: pointer;
+        font-size: 1vw;
+        font-weight: 900;
+    }
+}
