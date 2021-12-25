@@ -7,21 +7,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'CSS/index.css' %}">
+    <script src="https://kit.fontawesome.com/119ccea603.js" crossorigin="anonymous"></script>
     <title>De Snelle Knipper</title>
 </head>
 <body>
     <header>
-        <img src="{% static 'IMG/CornerLogo.png' %}" alt="CornerLogo">
-        <div class="title">
+        <div class="logo">
             <h1>De Snelle Knipper</h1>
-            <h3>Geknipt met en zonder afspraak</h3>
+            <h2>Geknipt met en zonder afspraak</h2>
         </div>
-        <div class="headInfo">
-            <h2>06 - 53 64 85 74</h2>
-            <p>KVK - 30111131</p>
+        <div class="nav">
+            <a {% if request.get_full_path == '/' %}class="current"{% endif %} href="/">Home</a>
+            <a {% if request.get_full_path == '/tarieven' %}class="current"{% endif %} href="/tarieven">Tarieven</a>
+            <a {% if request.get_full_path == '/overMij' %}class="current"{% endif %} href="/overMij">Over mij</a>
+            <a {% if request.get_full_path == '/login' %}class="current"{% endif %} href="/login">Login</a>
         </div>
-        <div class="blackline"></div>
     </header>
     {% include page %}
+    <footer>
+        <div class="openingstijden">
+            {% for time in opened %}
+                <p>{{ time.openedDay }}: {{ time.openedTime }}</p>
+            {% endfor %}
+        </div>
+        <div class="socials">
+            <div class="insta">
+                <a href="https://instagram.com"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+            <div class="facebook">
+                <a href="https://facebook.com"><i class="fab fa-facebook"></i> Facebook</a>
+            </div>
+            <div class="twitter">
+                <a href="https://twitter.com"><i class="fab fa-twitter"></i> Twitter</a>
+            </div>
+        </div>
+        <div class="location">
+            <div class="map">
+                <a target="_blank" href="https://www.google.nl/maps/place/De+Snelle+Knipper/@52.0192101,5.0444143,17z/data=!4m5!3m4!1s0x47c664955a962a3f:0x15c46dca4704f5b6!8m2!3d52.0190087!4d5.0444626"><img src="{% static 'IMG/minimap.png' %}" alt=""></a>
+            </div>
+            <div class="data">
+                <p>Voorstraat 47</p>
+                <p>3401DB IJsselstein</p>
+                <p><a target="_blank" href="https://www.google.nl/maps/place/De+Snelle+Knipper/@52.0192101,5.0444143,17z/data=!4m5!3m4!1s0x47c664955a962a3f:0x15c46dca4704f5b6!8m2!3d52.0190087!4d5.0444626">Google maps</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

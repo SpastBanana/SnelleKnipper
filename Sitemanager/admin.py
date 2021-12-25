@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import mainPrice, salePrices, newsBlocks
+from .models import mainPrice, salePrices, openedTimes
 
 admin.site.register(mainPrice)
 admin.site.register(salePrices)
-admin.site.register(newsBlocks)
+admin.site.register(openedTimes)

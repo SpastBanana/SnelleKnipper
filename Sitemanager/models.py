@@ -2,6 +2,17 @@ from typing import DefaultDict
 from django.db import models
 
 
+class openedTimes(models.Model):
+    openedDay = models.CharField(max_length=30)
+    openedTime = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.openedDay
+
+    class Meta:
+        verbose_name_plural = "Openings tijden"
+
+
 class mainPrice(models.Model):
     snipPrice = models.CharField(max_length=30)
 
@@ -21,24 +32,3 @@ class salePrices(models.Model):
 
     class Meta:
         verbose_name_plural = "Korting namen en prijzen"
-
-
-class newsBlocks(models.Model):
-    styleChoises = {
-        ('Rood', 'Rood'),
-        ('Groen', 'Groen'),
-        ('Blauw', 'Blauw'),
-        ('Geen', 'Geen'),
-    }
-    title = models.CharField(max_length=30)
-    img = models.ImageField(upload_to="newsImages", default='none.png', null=True, blank=True)
-    borderSelect = models.CharField(max_length=255, choices=styleChoises)
-    alinea1 = models.TextField(max_length=150)
-    alinea2 = models.TextField(max_length=150)
-    alinea3 = models.TextField(max_length=150)
-
-    def __str__(self):
-        return self.title
-
-    class Meta:
-        verbose_name_plural = "Niews blokken"

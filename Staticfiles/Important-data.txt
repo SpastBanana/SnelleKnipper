@@ -1,0 +1,4 @@
+Blue color: #222a35
+Gray background: #272727
+Lether color: #8c3b0e
+Footer black: #181717

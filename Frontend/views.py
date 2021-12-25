@@ -1,17 +1,17 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
-from Sitemanager.models import mainPrice, salePrices, newsBlocks
+from Sitemanager.models import mainPrice, salePrices, openedTimes
 
 def homeView(request):
     knippie = mainPrice.objects.last()
     kortie = salePrices.objects.all()
-    news = newsBlocks.objects.all()
+    opened = openedTimes.objects.all()
 
     data = {
         'page': 'home.html',
         'mainPrice': knippie,
         'kortingen': kortie,
-        'news': news,
+        'opened': opened,
     }
 
     return render(request, 'index.html', data)

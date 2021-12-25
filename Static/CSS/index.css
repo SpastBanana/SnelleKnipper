@@ -4,135 +4,222 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.letherOuterBox {
+    background-color: #8c3b0e;
+    height: 98%;
+    width: 98%;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+.letherInnerBox {
+    background-color: #8c3b0e;
+    border: dashed 2.5px whitesmoke;
+    width: 99%;
+    height: 99%;
+}
+
 @media (min-width: 800px) {
-
-    header img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 150px;
-    }
-
+    
     header {
-        height: 150px;
-        width: 80%;
-        margin-left: 10%;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-
-    header h1 {
-        font-size: 2vw;
-        font-weight: 900;
-    }
-
-    header h3 {
-        font-size: 1vw;
-        font-weight: 200;
-    }
-
-    header .title{
-        width: 35%;
-        height: 55%;
-        text-align: center;
-        font-weight: 500;
+        height: 200px;
+        width: 100%;
+        background: #1d2c3f;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
-        border-bottom: solid 7px #324c8a;
-        border-radius: 15px;
-        box-shadow: 0px 6px 10px 2px #666666;
+        position: relative;
+        margin-bottom: 5px;
     }
 
-    .headInfo p {
+    .logo {
         text-align: center;
-        font-size: 110%;
-        font-weight: 600;
+        color: whitesmoke;
     }
 
-    header h2 {
-        font-size: 150%;
-        color: #324c8a;
+    .logo h1 {
+        font-size: 35px;
     }
 
-    .blackline {
+    .logo h2 {
+        font-size: 15px;
+        color: #aaaaaa;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
         position: absolute;
-        top: 150px;
-        left: 0;
-        height: 24%;
-        height: 3px;
-        width: 100%;
-        background: black;
+        bottom: 2px;
+        right: 0;
+        height: 40px;
+        width: 35%;
+        font-size: 14px;
+    }
+
+    .nav a {
+        color: whitesmoke;
+        font-weight: bolder;
+        text-decoration: none;
+        padding: 6px;
+        background-color: none;
+        border-radius: 3px;
+        outline: none;
+    }
+
+    .nav .current {
+        background-color: #8c3b0e;
+    }
+
+    footer {
+        height: 280px;
+        width: 90%;
+        background-color: #181717;
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: whitesmoke;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .openingstijden {
+        font-size: 20px;
+    }
+
+    .socials {
+        font-size: 25px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 150px;
+        color: whitesmoke;
+    }
+
+    .socials a {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+
+    .socials a i {
+        font-size: 35px;
+        margin-right: 15px;
+    }
+
+    .localtion .data {
+        text-align: center;
+    }
+
+    .location .data a {
+        color: whitesmoke;
     }
 }
 
 @media (max-width: 800px) {
-    
-    header img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 160px;
-    }
-    
     header {
-        height: 160px;
-        width: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
-    }
-    
-    header h1 {
-        font-size: 20px;
-        font-weight: 900;
-    }
-    
-    header h3 {
-        font-size: 12px;
-        font-weight: 200;
-    }
-    
-    header .title{
-        width: 52%;
-        height: 70px;
-        text-align: center;
-        font-weight: 500;
+        height: 200px;
+        width: 100%;
+        background: #1d2c3f;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
-        border-bottom: solid 7px #324c8a;
-        border-radius: 15px;
-        box-shadow: 0px 6px 10px 2px #666666;
-        margin-right: -30%;
+        position: relative;
+        margin-bottom: 5px;
     }
 
-    .headInfo {
+    .logo {
         text-align: center;
-        margin-right: -30%;
+        color: whitesmoke;
     }
-    
-    .headInfo p {
-        text-align: center;
-        font-size: 12px;
-        font-weight: 600;
+
+    .logo h1 {
+        font-size: 28px;
     }
-    
-    header h2 {
-        font-size: 17px;
-        color: #324c8a;
+
+    .logo h2 {
+        font-size: 13px;
+        color: #aaaaaa;
     }
-    
-    .blackline {
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
         position: absolute;
-        top: 160px;
-        left: 0;
-        height: 3px;
-        width: 100vw;
-        background: black;
+        bottom: 2px;
+        right: 0;
+        height: 40px;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .nav a {
+        color: whitesmoke;
+        font-weight: bolder;
+        text-decoration: none;
+        padding: 6px;
+        background-color: none;
+        border-radius: 3px;
+        outline: none;
+    }
+
+    .nav .current {
+        background-color: #8c3b0e;
+    }
+
+    footer {
+        height: 280px;
+        width: 96%;
+        background-color: #181717;
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: whitesmoke;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .openingstijden {
+        font-size: 10px;
+    }
+
+    .socials {
+        font-size: 10px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 80px;
+        color: whitesmoke;
+    }
+
+    .socials a {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+
+    .socials a i {
+        font-size: 15px;
+        margin-right: 15px;
+    }
+
+    .location {
+        width: 22%;
+    }
+
+    .location .map img {
+        width: 100%;
+    }
+
+    .location .data {
+        font-size: 8px;
+    }
+
+    .location .data a {
+        color: whitesmoke;
     }
 }

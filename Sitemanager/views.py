@@ -1,7 +1,6 @@
 from django.shortcuts import get_object_or_404, redirect, render
 from django.core.files.storage import FileSystemStorage
-from .models import mainPrice, salePrices, newsBlocks
-from .forms import newsForm
+from .models import mainPrice, salePrices
 
 def homeView(request):
     if not request.user.is_authenticated:
@@ -63,44 +62,6 @@ def delSaleView(request, saleID):
     }
 
     return render(request, 'DataLectro-Sitemanager/index.html', data)
-
-
-def newsView(request):
-    if not request.user.is_authenticated:
-        return redirect('/login')
-
-    news = newsBlocks.objects.all()
-
-    data = {
-        'page': 'DataLectro-Sitemanager/news.html',
-        'news': news,
-    }
-
-    if request.method == 'POST' and 'add' in request.POST:
-        form = newsForm(request.POST, request.FILES)
-
-        if form.is_valid:
-            form.save()
-
-    return render(request, 'DataLectro-Sitemanager/index.html', data)
-
-
-def delNewsView(request, newsID):
-    if not request.user.is_authenticated:
-        return redirect('/login')
-
-    newsItem = get_object_or_404(newsBlocks, pk=newsID)
-    newsItem.img.delete()
-    deleted = newsItem.title
-    newsItem.delete()
-
-    data = {
-        'page': 'DataLectro-Sitemanager/succesfullDeleted.html',
-        'deleted': deleted,
-    }
-
-    return render(request, 'DataLectro-Sitemanager/index.html', data)
-
 
 
 
