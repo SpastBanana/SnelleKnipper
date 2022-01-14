@@ -1,0 +1,111 @@
+@media (min-width: 800px) {
+    main {
+        padding-top: 10vw;
+        padding-bottom: 10vw;
+        background-color: #272727;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .price {
+        height: 40vh;
+        width: 20vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        color: whitesmoke;
+    }
+
+    .price::before {
+        background-color: #1d2c3f;
+    }
+
+    .price h1,
+    .sales h1 {
+        font-size: 2vw;
+        text-shadow: black 1px 1px;
+    }
+
+    .sales h1 {
+        color: #3d1601;
+    }
+
+    .price h2 {
+        font-size: 2.5vw;
+    }
+
+    .sales {
+        height: 40vh;
+        width: 35vw;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .sales h3 {
+        font-size: 1.2vw;
+    }
+
+    .sales p {
+        font-size: 1vw;
+    }
+}
+
+@media (max-width: 800px) {
+    main {
+        padding-top: 10vw;
+        padding-bottom: 10vw;
+        background-color: #272727;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .price {
+        height: 40vh;
+        width: 75vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        margin-bottom: 50px;
+        color: whitesmoke;
+    }
+    .price::before {
+        background-color: #1d2c3f;
+    }
+
+    .price h1,
+    .sales h1 {
+        font-size: 25px;
+        text-shadow: black 1px 1px;
+    }
+
+    .sales h1 {
+        color: #3d1601;
+    }
+
+    .price h2 {
+        font-size: 25px;
+    }
+
+    .sales {
+        height: 40vh;
+        width: 75vw;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .sales h3 {
+        font-size: 15px;
+    }
+
+    .sales p {
+        font-size: 12px;
+    }
+}

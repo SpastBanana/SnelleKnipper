@@ -20,7 +20,13 @@
             <a {% if request.get_full_path == '/' %}class="current"{% endif %} href="/">Home</a>
             <a {% if request.get_full_path == '/tarieven' %}class="current"{% endif %} href="/tarieven">Tarieven</a>
             <a {% if request.get_full_path == '/overMij' %}class="current"{% endif %} href="/overMij">Over mij</a>
+            
+            {% if user.is_authenticated %}
+            <a {% if request.get_full_path == '/sitemanager' %}class="current"{% endif %} href="/sitemanager">Sitemanager</a>
+            {% else %}
             <a {% if request.get_full_path == '/login' %}class="current"{% endif %} href="/login">Login</a>
+            {% endif %}
+            
         </div>
     </header>
     {% include page %}
@@ -52,5 +58,6 @@
             </div>
         </div>
     </footer>
+    <div class="test"></div>
 </body>
 </html>

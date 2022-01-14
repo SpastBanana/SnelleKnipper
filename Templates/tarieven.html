@@ -1,0 +1,21 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'CSS/tarieven.css' %}">
+</head>
+
+<main>
+    <div class="lether price">
+        <h1>Knip prijs:</h1>
+        <h2>{{ price }}</h2>
+    </div>
+    <div class="lether sales">
+        <h1>Kortingen:</h1>
+        {% for item in sales %}
+            <div class="salesItem">
+                <h3>{{ item.saleName }}</h3>
+                <p>{{ item.salePrice }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</main>

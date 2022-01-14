@@ -4,19 +4,36 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.letherOuterBox {
-    background-color: #8c3b0e;
-    height: 98%;
-    width: 98%;
-    padding: 1%;
-    border-radius: 10px;
+.lether {
+    position: relative;
+    padding: 15px;
+    border: dashed 2px whitesmoke;
+    border-radius: 5px;
 }
 
-.letherInnerBox {
-    background-color: #8c3b0e;
-    border: dashed 2.5px whitesmoke;
-    width: 99%;
-    height: 99%;
+.lether::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+    border-radius: 8px;
+    z-index: -5;
+    background: #8c3b0e;
+    box-shadow: 0px 0px 18px 7px #111111;
+}
+
+main {
+    position: relative;
+    z-index: -50;
+    background-color: #272727;
+    display: flex;
+}
+
+body {
+    position: relative;
+    z-index: -60;
 }
 
 @media (min-width: 800px) {
