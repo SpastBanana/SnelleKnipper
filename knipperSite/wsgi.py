@@ -8,9 +8,12 @@ https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
 """
 
 import os
+import sys
+
+sys.path.append('/root/SnelleKnipper')
 
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'knipperSite.settings')
-# os.environ['HTTPS'] = "on"
+
 application = get_wsgi_application()
