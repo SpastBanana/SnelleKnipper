@@ -1,0 +1,38 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'DataLectro-Sitemanager/CSS/opened.css' %}">
+</head>
+<main>
+    <div class="header">
+        <h1>Kortingen</h1>
+        <a href="/sitemanager"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>Return</a>
+    </div>
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            <h2>Pas hier een openingstijd aan:</h2>
+            <select name="day" id="">
+                <option value="Ma">Maandag</option>
+                <option value="Di">Dinsdag</option>
+                <option value="Wo">Woensdag</option>
+                <option value="Do">Donderdag</option>
+                <option value="Vr">Vrijdag</option>
+                <option value="Za">Zaterdag</option>
+                <option value="Zo">Zondag</option>
+            </select>
+            <input type="text" name="time" placeholder="Tijd" autocomplete="off">
+            <button name="change" type="submit">Submit</button>
+        </form>
+        <div class="salesList">
+            {% for time in opened %}
+            <div class="itemBox">
+                <div class="sale">
+                    <h1>{{ time.openedDay }}</h1>
+                    <h2>{{ time.openedTime }}</h2>
+                </div>
+                <a class="delIcon" href="/sitemanager/kortingen/delete/{{ korting.id }}"><i class="fa fa-trash"></i></a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</main>

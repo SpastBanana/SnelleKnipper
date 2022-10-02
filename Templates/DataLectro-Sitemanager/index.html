@@ -1,26 +1,29 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>DataLectro-Sitemanager</title>
-    <link rel="stylesheet" href="{% static 'DataLectro-Sitemanager/CSS/index.css' %}">
-    <script src="https://kit.fontawesome.com/119ccea603.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header>
-        <div class="header-PC">
-            <div class="topTitle">
-                <a href="/" class="logo">
-                    <img src="{% static 'DataLectro-Sitemanager/IMG/logoNew.png' %}">
-                </a>
-                <a class="a" href="/">Back to site</a>
-                <a class="a" href="/logout" style="background-color: red;">Logout</a>
+    <head>
+        <meta charset="UTF-8">
+        <title>DataLectro-Sitemanager</title>
+        <link rel="stylesheet" href="{% static 'DataLectro-Sitemanager/CSS/index.css' %}">
+        <script src="https://kit.fontawesome.com/119ccea603.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <a href="https://datalectro.nl" class="logo" target="_blank">
+                <img src="{% static 'DataLectro-Sitemanager/IMG/logoNew.png' %}" alt="">
+            </a>
+            <div class="nav">
+                <p>actions</p>
+                <a href="/sitemanager" class="dashboard">Dashboard</a>
+                <a href="/" class="back">Back to site</a>
+                <a href="/logout">Logout</a>
+                <p>Site settings</p>
+                <a href="/sitemanager/knipprijs">Knip prijs</a>
+                <a href="/sitemanager/kortingen">Kortingen</a>
+                <a href="/sitemanager/openingstijden">Openingstijden</a>
             </div>
-            <div class="navList">
-            </div>
-        </div>
-    </header>
-    {% include page %}
-</body>
+            <a href="https://datalectro.nl" class="copy" target="_blank">&#169; datalectro.nl</a>
+        </header>
+        {% include page %}
+    </body>
 </html>

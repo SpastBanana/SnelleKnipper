@@ -44,12 +44,16 @@ form h2 {
     margin-bottom: 10px;
 }
 
-form input, form button {
+form input, form button, form select {
     padding: 10px;
     width: 300px;
     margin-top: 10px;
     outline: none;
     font-size: 16px;
+}
+
+form select {
+    width: 324px;
 }
 
 form button {
@@ -118,14 +122,4 @@ form button {
 
 .sale h2 {
     font-size: 20px;
-}
-
-.delIcon {
-    position: absolute;
-    top: -15px;
-    right: -18px;
-    z-index: 5;
-    font-size: 20px;
-    color: red;
-    padding: 10px;
 }

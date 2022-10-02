@@ -3,27 +3,28 @@
     <link rel="stylesheet" href="{% static 'DataLectro-Sitemanager/CSS/sales.css' %}">
 </head>
 <main>
-    <div class="title">
-        <h1>Beheer kortingen:</h1>
+    <div class="header">
+        <h1>Kortingen</h1>
+        <a href="/sitemanager"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i>Return</a>
     </div>
-    <a href="/sitemanager" class="return">
-        <div>Go back...</div>
-    </a>
-    <form method="post">
-        {% csrf_token %}
-        <input type="text" name="saleName" placeholder="Naam / omschrijving van korting">
-        <input type="text" name="salePrice" placeholder="Korting (prijs)">
-        <button name="add" type="submit">Submit!</button>
-    </form>
-    <div class="pagesList">
-        {% for korting in kortingen %}
-        <div class="itemBox">
-            <div class="pageLink">
-                <p>Korting - {{ korting.saleName }}</p>
-                <p>{{ korting.salePrice }}</p>
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            <h2>Voeg hier nieuwe kortingen toe:</h2>
+            <input type="text" name="saleName" placeholder="Naam / omschrijving van korting" autocomplete="off">
+            <input type="text" name="salePrice" placeholder="Korting (prijs)" autocomplete="off">
+            <button name="add" type="submit">Submit</button>
+        </form>
+        <div class="salesList">
+            {% for korting in kortingen %}
+            <div class="itemBox">
+                <div class="sale">
+                    <h1>Korting - {{ korting.saleName }}</h1>
+                    <h2>{{ korting.salePrice }}</h2>
+                </div>
+                <a class="delIcon" href="/sitemanager/kortingen/delete/{{ korting.id }}"><i class="fa fa-trash"></i></a>
             </div>
-            <a class="delIcon" href="/sitemanager/kortingen/delete/{{ korting.id }}"><i class="fa fa-trash"></i></a>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 </main>

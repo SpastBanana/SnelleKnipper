@@ -7,4 +7,5 @@ urlpatterns = [
     path('knipprijs', views.priceView, name="knipprijs"),
     path('kortingen', views.salesView, name="kortingen"),
     path('kortingen/delete/<int:saleID>', views.delSaleView, name="deleteSale"),
+    path('openingstijden', views.openTimes, name="openingstijden"),
 ]
