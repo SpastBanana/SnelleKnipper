@@ -52,6 +52,10 @@
     .sales p {
         font-size: 1vw;
     }
+
+    .salesItem {
+        color: rgb(16, 16, 16);
+    }
 }
 
 @media (max-width: 800px) {
@@ -107,5 +111,8 @@
 
     .sales p {
         font-size: 12px;
+    }
+    .salesItem {
+        color: rgb(16, 16, 16);
     }
 }

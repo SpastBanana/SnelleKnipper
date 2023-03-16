@@ -6,13 +6,6 @@
         justify-content: space-evenly;
     }
 
-    .info {
-        height: 500px;
-        width: auto;
-        margin-top: 80px;
-        margin-bottom: 80px;
-    }
-
     .about {
         height: 500px;
         width: 35%;
@@ -43,44 +36,26 @@
     }
 
     .info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .info .metal {
-        position: relative;
-    }
-
-    .info .metal img {
-        width: 100%;
-        height: 160px;
-        border-radius: 18px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        box-shadow: 0px 0px 18px 1px #111111;
-    }
-
-    .info .metal .contact{
-        width: 100%;
-        height: 160px;
-        border-radius: 18px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 40%);
-        color: whitesmoke;
+        height: 545px;
+        width: 25%;
+        margin-top: 10px;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         flex-direction: column;
     }
 
-    .info .shop img {
+    .text,
+    .text a {
+        color: rgb(16, 16, 16);
+    }
+
+    .text {
+        width: calc(100% - 45px);
+    }
+
+    img {
         width: 100%;
-        height: 300px;
-        box-shadow: 0px 0px 18px 1px #111111;
     }
 }
 
@@ -94,7 +69,7 @@
 
     .about {
         height: 450px;
-        width: 75%;
+        width: 350px;
         margin-top: 30px;
         margin-bottom: 30px;
         display: flex;
@@ -121,44 +96,30 @@
     }
 
     .info {
-        width: 85%;
-    }
-
-    .metal {
-        position: relative;
-        margin-bottom: 190px;
-        text-align: center;
-    }
-
-    .metal img {
-        width: 100%;
-        height: 160px;
-        border-radius: 18px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        box-shadow: 0px 0px 18px 1px #111111;
-    }
-
-    .metal .contact{
-        width: 100%;
-        height: 160px;
-        border-radius: 18px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 40%);
-        color: whitesmoke;
+        height: 450px;
+        width: 400px;
+        margin-top: 10px;
+        margin-bottom: 20px;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         flex-direction: column;
     }
 
-    .shop img {
-        position: rel;
+    .text::before {
+        background-color: #1d2c3f;
+    }
+
+    .text,
+    .text a {
+        color: rgb(16, 16, 16);
+    }
+
+    .text {
+        width: calc(100% - 45px);
+    }
+
+    img {
         width: 100%;
-        box-shadow: 0px 0px 18px 1px #111111;
-        margin-bottom: 30px;
     }
 }
